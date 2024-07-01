@@ -285,7 +285,7 @@ func (g *Graph) ToDOT(pubKey string) string {
 
 	// Add nodes with ranks
 	for _, id := range includedNodes {		
-		builder.WriteString(fmt.Sprintf("  \"%d\" [label=\"%s\", rank=\"%f\"];\n", id, g.nodes[id].label, g.nodes[id].ranking))		
+		builder.WriteString(fmt.Sprintf("  \"%d\" [label=\"%s\", ranking=\"%f\"];\n", id, g.nodes[id].label, g.nodes[id].ranking))		
 	}
 
 	builder.WriteString("}\n")
